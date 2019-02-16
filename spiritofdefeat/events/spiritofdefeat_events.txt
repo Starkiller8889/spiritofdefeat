@@ -1,0 +1,23 @@
+add_namespace = spiritofdefeat
+
+##Event: Death of Vladimir Lenin
+country_event = {
+ id = spiritofdefeat.1
+ title = spiritofdefeat.1.title
+ desc = spiritofdefeat.1.desc
+ picture = GFX_news_event_017
+ is_triggered_only = yes
+ fire_only_once = yes
+ major = yes
+ trigger = {
+date > 1936.1.23
+	}	mean_time_to_happen = { days = 1}
+	option = {
+		name = spiritofdefeat.1.a
+		ai_chance = { factor = 100}
+		create_country_leader = { name = "Russian Workers Congress" desc = "The group of Soviet Party Members who make laws for the Soviet Untion" picture = "Portrait_Duma.png" expire = "9999.1.1" ideology = marxism traits = { } }
+retire_country_leader = yes
+add_stability= -0.3
+	}
+}
+

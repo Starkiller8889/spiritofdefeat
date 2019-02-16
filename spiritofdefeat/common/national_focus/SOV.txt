@@ -1,0 +1,1421 @@
+focus_tree = { 
+id = SOV
+country = { 
+factor = 0 
+modifier = { 
+add = 10 
+tag = SOV 
+} 
+} 
+#Focus for A "New" Soviet Union
+focus = { 
+id = SOV_anewsovietunion
+icon = GFX_goal_generic_war_with_comintern
+x = 25
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = SOV_thestatusquo } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+completion_reward = { 
+add_political_power= 50
+ } 
+
+ } 
+
+#Focus for Trotskyism
+focus = { 
+id = SOV_trotskyism
+icon = GFX_goal_generic_demand_territory
+x = 15
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_handingdownthepole } 
+mutually_exclusive = { focus = SOV_molotvism } 
+mutually_exclusive = { focus = SOV_kamenev } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Molotvism
+focus = { 
+id = SOV_molotvism
+icon = GFX_goal_support_fourth_int
+x = 30
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_handingdownthepole } 
+mutually_exclusive = { focus = SOV_trotskyism } 
+mutually_exclusive = { focus = SOV_kamenev } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+
+ } 
+
+#Focus for The Status Quo
+focus = { 
+id = SOV_thestatusquo
+icon = GFX_goal_generic_war_with_comintern
+x = 5
+y = 0
+cost = 10
+available_if_capitulated = yes 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+mutually_exclusive = { focus = SOV_anewsovietunion } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+
+ } 
+
+#Focus for Call for a Congressional Election
+focus = { 
+id = SOV_callforacongressionalelection
+icon = GFX_goal_generic_territory_or_war
+x = 25
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_callforacongressionalelection } 
+prerequisite = { focus = SOV_anewsovietunion } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+completion_reward = { 
+add_political_power= -50
+ } 
+
+ } 
+
+#Focus for Socialism in One Country
+focus = { 
+id = SOV_socialisminonecountry
+icon = GFX_goal_support_communism
+x = 30
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_molotvism } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Establish the National Pride Comitee
+focus = { 
+id = SOV_establishthenationalpridecomitee
+icon = GFX_goal_tripartite_pact
+x = 5
+y = 1
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thestatusquo } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+
+ } 
+
+#Focus for Uniting the People
+focus = { 
+id = SOV_unitingthepeople
+icon = GFX_goal_molotov_ribbentrop_pact
+x = 10
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_establishthenationalpridecomitee } 
+prerequisite = { focus = SOV_thewarringfactions } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+
+ } 
+
+#Focus for Handing Down the Pole
+focus = { 
+id = SOV_handingdownthepole
+icon = GFX_goal_support_communism
+x = 20
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_callforacongressionalelection } 
+prerequisite = { focus = SOV_thewarringfactions } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+always= no
+ } 
+
+ } 
+
+#Focus for Big Brother
+focus = { 
+id = SOV_bigbrother
+icon = GFX_goal_generic_attack_allies
+x = 30
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thegreatpurge } 
+prerequisite = { focus = SOV_socialisminonecountry } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 0.25
+ } 
+
+ } 
+
+#Focus for Permanent Revolution
+focus = { 
+id = SOV_permanentrevolution
+icon = GFX_goal_generic_war_with_comintern
+x = 8
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_trotskyism } 
+prerequisite = { focus = SOV_kamenev } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+create_wargoal= { 
+type = annex_everything 
+target = EWC
+}
+
+create_wargoal= { 
+type = annex_everything 
+target = MSR
+}
+
+
+create_wargoal= { 
+type = annex_everything 
+target = UKR
+}
+ } 
+
+ } 
+
+#Focus for Kamenev
+focus = { 
+id = SOV_kamenev
+icon = GFX_goal_tripartite_pact
+x = 1
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_unitingthepeople } 
+mutually_exclusive = { focus = SOV_trotskyism } 
+mutually_exclusive = { focus = SOV_molotvism } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Establish the NKVD
+focus = { 
+id = SOV_establishthenkvd
+icon = GFX_goal_generic_attack_allies
+x = 23
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_trotskyism } 
+prerequisite = { focus = SOV_molotvism } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_political_power= -250
+add_stability= 0.15
+ } 
+
+ } 
+
+#Focus for The Warring Factions
+focus = { 
+id = SOV_thewarringfactions
+icon = GFX_goal_generic_attack_allies
+x = 15
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_anewsovietunion } 
+prerequisite = { focus = SOV_thestatusquo } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= -0.2
+ } 
+
+ } 
+
+#Focus for "The Hidden Army"
+focus = { 
+id = SOV_thehiddenarmy
+icon = GFX_goal_generic_army_tanks
+x = 19
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_consolidatetrotskyistpower } 
+prerequisite = { focus = SOV_establishthenkvd } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Rooting Out The Opposition
+focus = { 
+id = SOV_rootingouttheopposition
+icon = GFX_focus_generic_join_comintern
+x = 4
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_continuethenep } 
+prerequisite = { focus = SOV_permanentrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_stability= 0.15
+ } 
+
+ } 
+
+#Focus for The Final Line of Defense
+focus = { 
+id = SOV_thefinallineofdefense
+icon = GFX_focus_generic_little_entente
+x = 1
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_rootingouttheopposition } 
+prerequisite = { focus = SOV_permanentrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+completion_reward = {
+            army_experience = 5
+            add_tech_bonus = {
+                name = land_doc_bonus
+                bonus = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+ } 
+
+ } 
+
+#Focus for Create an Offensive Army
+focus = { 
+id = SOV_createanoffensivearmy
+icon = GFX_goal_generic_secret_weapon
+x = 15
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_antidemocraticpropoganda } 
+prerequisite = { focus = SOV_thehiddenarmy } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+completion_reward = {
+            army_experience = 5
+            add_tech_bonus = {
+                name = land_doc_bonus
+                bonus = 0.5
+                uses = 1
+                category = land_doctrine
+            }
+        }
+ } 
+
+ } 
+
+#Focus for Home of the Revolution
+focus = { 
+id = SOV_homeoftherevolution
+icon = GFX_focus_chi_mission_to_the_soviet_union
+x = 15
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_createanoffensivearmy focus = SOV_bigbrother focus = SOV_thefinallineofdefense } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_ideas= home_of_revolution
+ } 
+
+ } 
+
+#Focus for The Great Purge
+focus = { 
+id = SOV_thegreatpurge
+icon = GFX_goal_generic_war_with_comintern
+x = 27
+y = 6
+cost = 
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_establishthenkvd } 
+prerequisite = { focus = SOV_socialisminonecountry } 
+bypass = { 
+custom_trigger_tooltip = {
+tooltip = SOV_great_purge_bypass_tt
+has_country_flag = counter_purge
+}
+ } 
+available = { 
+NOT = { has_country_flag = counter_purge }
+has_government = communism
+ } 
+completion_reward = { 
+custom_effect_tooltip = SOV_great_purge_tt
+custom_effect_tooltip = SOV_great_purge_tt2
+
+
+if = {
+limit = {
+OR = {
+has_country_flag = purge_1_group_a
+has_country_flag = purge_1_group_b
+}
+OR = {
+has_country_flag = purge_2_group_a
+has_country_flag = purge_2_group_b
+}
+}
+add_timed_idea = {
+idea = officers_purged
+days = 1460
+}
+hidden_effect = {
+country_event = { id = soviet.37 days = 146 }
+}
+hidden_effect = {
+news_event = { hours = 6 id = news.219 }
+}
+}
+
+
+if = {
+limit = {
+OR = {
+AND = {
+NOT = { 
+OR = { 
+has_country_flag = purge_1_group_a
+has_country_flag = purge_1_group_b
+}
+}
+OR = {
+has_country_flag = purge_2_group_a
+has_country_flag = purge_2_group_b
+}
+}
+AND = {
+OR = { 
+has_country_flag = purge_1_group_a
+has_country_flag = purge_1_group_b
+}
+NOT = {
+OR = {
+has_country_flag = purge_2_group_a
+has_country_flag = purge_2_group_b
+}
+}
+}
+}
+}
+add_timed_idea = {
+idea = officers_purged_4
+days = 1021
+}
+hidden_effect = {
+country_event = { id = soviet.40 days = 146 }
+}
+}
+
+
+if = {
+limit = {
+NOT = {
+OR = {
+has_country_flag = purge_1_group_a
+has_country_flag = purge_1_group_b
+}
+}
+NOT = {
+OR = {
+has_country_flag = purge_2_group_a
+has_country_flag = purge_2_group_b
+}
+}
+}
+add_timed_idea = {
+idea = officers_purged_7
+days = 583
+}
+hidden_effect = {
+country_event = { id = soviet.43 days = 146 }
+}
+}
+
+remove_ideas = trotskyite_plot
+add_ideas = trotskyite_plot_purged
+
+hidden_effect = {
+if = {
+limit = { 
+any_other_country = {
+is_major = yes
+has_offensive_war_with = SOV
+}
+}
+country_event = { id = soviet.46 days = 3 }
+} 
+}
+ } 
+
+ } 
+
+#Focus for Anti-Democratic Propoganda
+focus = { 
+id = SOV_antidemocraticpropoganda
+icon = GFX_focus_generic_soviet_politics
+x = 11
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_consolidatetrotskyistpower } 
+prerequisite = { focus = SOV_permanentrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Continue the NEP
+focus = { 
+id = SOV_continuethenep
+icon = GFX_goal_generic_soviet_construction
+x = 1
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_kamenev } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+random_owned_controlled_state = { limit = { free_building_slots = { building = industrial_complex size > 0 include_locked = yes } } add_extra_state_shared_building_slots = 1 add_building_construction = { type = industrial_complex level = 1 instant_build = yes } set_state_flag = 1}
+ } 
+
+ } 
+
+#Focus for Consolidate Trotskyist Power
+focus = { 
+id = SOV_consolidatetrotskyistpower
+icon = GFX_goal_generic_attack_allies
+x = 15
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_trotskyism } 
+ai_will_do = { 
+ factor = 1
+ } 
+completion_reward = { 
+add_popularity= { 
+ideology = orthodox_marxism
+popularity = 0.5
+}
+ } 
+
+ } 
+
+#Focus for The Midnight Incident
+focus = { 
+id = SOV_themidnightincident
+icon = GFX_goal_generic_attack_allies
+x = 40
+y = 0
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Addresing the Leauge of Nations
+focus = { 
+id = SOV_addresingtheleaugeofnations
+icon = GFX_goal_demand_sudetenland
+x = 40
+y = 1
+cost = 2
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_themidnightincident } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Reapporachment of the Leauge of Nations
+focus = { 
+id = SOV_reapporachmentoftheleaugeofnations
+icon = GFX_goal_support_fourth_int
+x = 39
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_addresingtheleaugeofnations } 
+mutually_exclusive = { focus = SOV_distancefromtheleaugeofnations } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Join the Leauge of Nations
+focus = { 
+id = SOV_jointheleaugeofnations
+icon = GFX_focus_generic_soviet_politics
+x = 38
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_reapporachmentoftheleaugeofnations } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Distance from the Leauge of Nations
+focus = { 
+id = SOV_distancefromtheleaugeofnations
+icon = GFX_goal_generic_war_with_comintern
+x = 41
+y = 2
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_addresingtheleaugeofnations } 
+mutually_exclusive = { focus = SOV_reapporachmentoftheleaugeofnations } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Workers of the West
+focus = { 
+id = SOV_workersofthewest
+icon = GFX_goal_generic_demand_territory
+x = 40
+y = 10
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_continuetherevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Continue the Revolution
+focus = { 
+id = SOV_continuetherevolution
+icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+x = 40
+y = 9
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_disbandtheworkerscongress } 
+prerequisite = { focus = SOV_purifythemillitary } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Purify the Millitary
+focus = { 
+id = SOV_purifythemillitary
+icon = GFX_goal_demand_sudetenland
+x = 42
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_unity } 
+prerequisite = { focus = SOV_pride } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Disband the Workers Congress
+focus = { 
+id = SOV_disbandtheworkerscongress
+icon = GFX_goal_support_fourth_int
+x = 38
+y = 8
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_recovery } 
+prerequisite = { focus = SOV_unity } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Pride
+focus = { 
+id = SOV_pride
+icon = GFX_focus_generic_soviet_politics
+x = 45
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_truerevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Unity
+focus = { 
+id = SOV_unity
+icon = GFX_goal_tfv_burn_the_royal_portraits
+x = 40
+y = 7
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Recovery
+focus = { 
+id = SOV_recovery
+icon = GFX_focus_generic_join_comintern
+x = 35
+y = 7
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_truerevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for True Revolution
+focus = { 
+id = SOV_truerevolution
+icon = GFX_goal_support_fourth_int
+x = 40
+y = 6
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_turkishunion } 
+prerequisite = { focus = SOV_workersofthesouth } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Workers of the South
+focus = { 
+id = SOV_workersofthesouth
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 42
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theeasternsoviets } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Turkish Union
+focus = { 
+id = SOV_turkishunion
+icon = GFX_goal_generic_war_with_comintern
+x = 38
+y = 5
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theeasternsoviets } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Eastern Soviets
+focus = { 
+id = SOV_theeasternsoviets
+icon = GFX_goal_generic_attack_allies
+x = 40
+y = 4
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_jointheleaugeofnations focus = SOV_makeourownleauge } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Make Our Own Leauge
+focus = { 
+id = SOV_makeourownleauge
+icon = GFX_goal_support_fourth_int
+x = 42
+y = 3
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_distancefromtheleaugeofnations } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Eyes on Europe
+focus = { 
+id = SOV_eyesoneurope
+icon = GFX_focus_ger_great_red_menace
+x = 38
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_workersofthewest } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The American Traitors
+focus = { 
+id = SOV_theamericantraitors
+icon = GFX_focus_generic_strike_at_democracy3
+x = 42
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_workersofthewest } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The European Comrades
+focus = { 
+id = SOV_theeuropeancomrades
+icon = GFX_goal_generic_dangerous_deal
+x = 34
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_eyesoneurope } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Eastern March
+focus = { 
+id = SOV_theeasternmarch
+icon = GFX_focus_generic_polish_deal
+x = 38
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_eyesoneurope } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Czechoslovak Re-approachment
+focus = { 
+id = SOV_czechoslovakreapproachment
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 34
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theeuropeancomrades } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Northern Expansion
+focus = { 
+id = SOV_northernexpansion
+icon = GFX_goal_generic_war_with_comintern
+x = 32
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_aidingtheguominjun } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Workers of the East
+focus = { 
+id = SOV_workersoftheeast
+icon = GFX_goal_generic_demand_territory
+x = 30
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_continuetherevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Aiding the Guominjun
+focus = { 
+id = SOV_aidingtheguominjun
+icon = GFX_goal_support_fourth_int
+x = 32
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_workersoftheeast } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Rooting out the Warlords
+focus = { 
+id = SOV_rootingoutthewarlords
+icon = GFX_focus_ger_bulwark_against_bolshevism
+x = 32
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_aidingtheguominjun } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Japanese Atrocity
+focus = { 
+id = SOV_thejapaneseatrocity
+icon = GFX_goal_generic_attack_allies
+x = 24
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_workersoftheeast } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Siberian Railway
+focus = { 
+id = SOV_thesiberianrailway
+icon = GFX_focus_generic_diplomatic_treaty
+x = 24
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thejapaneseatrocity } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Bring Japan to Justice
+focus = { 
+id = SOV_bringjapantojustice
+icon = GFX_goal_generic_political_pressure
+x = 28
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_uncoveringthespys } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Thier Highness
+focus = { 
+id = SOV_thierhighness
+icon = GFX_focus_RAJ_lions_of_the_great_war
+x = 24
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thesiberianrailway } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Uncovering the Spys
+focus = { 
+id = SOV_uncoveringthespys
+icon = GFX_goal_continuous_boost_freedom
+x = 28
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thejapaneseatrocity } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Workers of Manchuko
+focus = { 
+id = SOV_workersofmanchuko
+icon = GFX_focus_generic_japanese_imperial_glory
+x = 20
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thejapaneseatrocity } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Manchukan Revolution
+focus = { 
+id = SOV_manchukanrevolution
+icon = GFX_focus_generic_join_comintern
+x = 20
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_workersofmanchuko } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Eastern Home
+focus = { 
+id = SOV_theeasternhome
+icon = GFX_goal_tfv_burn_the_royal_portraits
+x = 24
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_bringjapantojustice } 
+prerequisite = { focus = SOV_thierhighness } 
+prerequisite = { focus = SOV_manchukanrevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for One China
+focus = { 
+id = SOV_onechina
+icon = GFX_focus_chi_one_china_policy
+x = 32
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_rootingoutthewarlords } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expanding The Internationale
+focus = { 
+id = SOV_expandingtheinternationale
+icon = GFX_goal_support_fourth_int
+x = 34
+y = 13
+cost = 10
+available_if_capitulated = yes 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The PPR
+focus = { 
+id = SOV_theppr
+icon = GFX_goal_generic_political_pressure
+x = 38
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theeasternmarch } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Western Home
+focus = { 
+id = SOV_thewesternhome
+icon = GFX_focus_generic_anti_fascist_diplomacy
+x = 36
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_expandingtheinternationale } 
+prerequisite = { focus = SOV_theppr } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Great Divide
+focus = { 
+id = SOV_thegreatdivide
+icon = GFX_focus_AST_never_gallipoli
+x = 36
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thewesternhome } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Aid Civil Rights Groups
+focus = { 
+id = SOV_aidcivilrightsgroups
+icon = GFX_goal_generic_attack_allies
+x = 42
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theamericantraitors } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The 1940 Elections
+focus = { 
+id = SOV_the1940elections
+icon = GFX_goal_generic_territory_or_war
+x = 42
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_aidcivilrightsgroups } 
+ai_will_do = { 
+ factor = 1
+ } 
+available = { 
+date > 1940.8.1
+ } 
+
+ } 
+
+#Focus for A More Perfect Union
+focus = { 
+id = SOV_amoreperfectunion
+icon = GFX_goal_generic_war_with_comintern
+x = 50
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_clearingoutthemillitary } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Nationalize Farming
+focus = { 
+id = SOV_nationalizefarming
+icon = GFX_goal_generic_trade
+x = 46
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_westerninfastructure } 
+prerequisite = { focus = SOV_expandingcivillianindustries } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Propoganda Machine
+focus = { 
+id = SOV_thepropogandamachine
+icon = GFX_focus_YUG_pan_slavic_congress
+x = 56
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_increasingnationalpride } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Parade
+focus = { 
+id = SOV_theparade
+icon = GFX_goal_generic_army_tanks
+x = 52
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_increasingnationalpride } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Clearing out the Millitary
+focus = { 
+id = SOV_clearingoutthemillitary
+icon = GFX_goal_generic_alliance
+x = 50
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_endpoliticalopposition } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Increasing National Pride
+focus = { 
+id = SOV_increasingnationalpride
+icon = GFX_goal_generic_dangerous_deal
+x = 54
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theworkersathome } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for End Political Opposition
+focus = { 
+id = SOV_endpoliticalopposition
+icon = GFX_goal_generic_demand_territory
+x = 50
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theworkersathome } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Expanding Civillian Industries
+focus = { 
+id = SOV_expandingcivillianindustries
+icon = GFX_goal_generic_construct_civ_factory
+x = 48
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thefiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Western Infastructure
+focus = { 
+id = SOV_westerninfastructure
+icon = GFX_goal_generic_fortify_city
+x = 44
+y = 13
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_thefiveyearplan } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Northern Expiditon
+focus = { 
+id = SOV_thenorthernexpiditon
+icon = GFX_goal_rhineland
+x = 42
+y = 15
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_planb focus = SOV_theamericanally } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Five Year Plan
+focus = { 
+id = SOV_thefiveyearplan
+icon = GFX_goal_generic_construct_mil_factory
+x = 46
+y = 12
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_theworkersathome } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for Plan B
+focus = { 
+id = SOV_planb
+icon = GFX_focus_generic_strike_at_democracy2
+x = 44
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_the1940elections } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The American Ally
+focus = { 
+id = SOV_theamericanally
+icon = GFX_goal_generic_attack_allies
+x = 40
+y = 14
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_the1940elections } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#Focus for The Workers at Home
+focus = { 
+id = SOV_theworkersathome
+icon = GFX_goal_generic_demand_territory
+x = 50
+y = 11
+cost = 10
+available_if_capitulated = yes 
+prerequisite = { focus = SOV_continuetherevolution } 
+ai_will_do = { 
+ factor = 1
+ } 
+
+ } 
+
+#End of focuses 
+ }
